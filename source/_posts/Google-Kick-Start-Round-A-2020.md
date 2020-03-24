@@ -10,7 +10,6 @@ tags:
 - 二分
 - Trie/字典树/前缀树
 - DFS
-- 搜索
 categories: 竞赛
 mathjax: true
 ---
