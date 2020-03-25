@@ -114,3 +114,10 @@ symbols_count_time:
 # Extensions
 ## Plugins: http://hexo.io/plugins/
 plugins: hexo-generate-feed
+
+leancloud_counter_security:
+  enable_sync: true
+  app_id: IMNkizQWu45AM08TtNUvbaDh-gzGzoHsz
+  app_key: 9R8dxVbMHigT604DYV21r36A
+  username: # Will be asked while deploying if is left blank
+  password: # Recommmended to be left blank. Will be asked while deploying if is left blank
