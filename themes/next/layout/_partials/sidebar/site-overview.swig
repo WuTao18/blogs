@@ -12,11 +12,7 @@
   <nav class="site-state motion-element">
     {%- if config.archive_dir != '/' and site.posts.length > 0 %}
       <div class="site-state-item site-state-posts">
-        {%- if theme.menu.archives %}
-          <a href="{{ url_for(theme.menu.archives).split('||')[0] | trim }}">
-        {% else %}
-          <a href="{{ url_for(config.archive_dir) }}">
-        {%- endif %}
+        <a href="{{ url_for(config.archive_dir) }}">
           <span class="site-state-item-count">{{ site.posts.length }}</span>
           <span class="site-state-item-name">{{ __('state.posts') }}</span>
         </a>
@@ -28,11 +24,7 @@
       {%- set hasCategoriesPage = categoriesPageQuery.length > 0 %}
       <div class="site-state-item site-state-categories">
         {%- if hasCategoriesPage %}
-          {%- if theme.menu.categories %}
-            <a href="{{ url_for(theme.menu.categories).split('||')[0] | trim }}">
-          {% else %}
-            <a href="{{ url_for(config.category_dir) + '/' }}">
-          {%- endif %}
+          <a href="{{ url_for(config.category_dir) + '/' }}">
         {%- endif %}
         {%- set visibleCategories = 0 %}
         {%- for cat in site.categories %}
@@ -49,11 +41,7 @@
       {%- set hasTagsPage = tagsPageQuery.length > 0 %}
       <div class="site-state-item site-state-tags">
         {%- if hasTagsPage %}
-          {%- if theme.menu.tags %}
-            <a href="{{ url_for(theme.menu.tags).split('||')[0] | trim }}">
-          {% else %}
-            <a href="{{ url_for(config.tag_dir) + '/' }}">
-          {%- endif %}
+          <a href="{{ url_for(config.tag_dir) + '/' }}">
         {%- endif %}
         {%- set visibleTags = 0 %}
         {%- for tag in site.tags %}

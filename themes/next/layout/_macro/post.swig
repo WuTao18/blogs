@@ -339,6 +339,7 @@
                 <div class="fb-like" data-layout="button_count" data-share="true"></div>
               </div>
             {%- endif %}
+
           </div>
         {%- endif %}
 
